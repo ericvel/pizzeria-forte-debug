@@ -1,11 +1,7 @@
 import React from "react";
 import Header from "./Header";
 
-type Props = {
-  children?: JSX.Element;
-};
-
-export default function Layout({ children }: Props) {
+export default function Layout({ children }) {
   return (
     <div className="absolute inset-0 flex flex-col bg-stone-50">
       <Header />

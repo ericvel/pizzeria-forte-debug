@@ -1,5 +1,4 @@
 import { dummyPizzas } from "../data/dummyPizzas";
-import { IPizza } from "../interfaces/pizza";
 
 /* export const fetchAllPizzas = async (): Promise<IPizza[]> => {
   return fetch('https://kjetilpizzaapi.azurewebsites.net/api/pizza')
@@ -13,7 +12,7 @@ import { IPizza } from "../interfaces/pizza";
     });
 }; */
 
-export const fetchAllPizzas = async (): Promise<IPizza[]> => {
+export const fetchAllPizzas = async () => {
   return new Promise((resolve) => {
     resolve(dummyPizzas);
   });

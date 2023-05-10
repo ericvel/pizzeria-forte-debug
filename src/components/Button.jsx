@@ -1,18 +1,11 @@
 import React from "react";
 
-type Props = {
-  variant?: "primary" | "secondary" | "outlined" | "ghost";
-  size?: "large" | "small";
-  onClick?: () => void;
-  children?: string;
-};
-
 export default function Button({
   variant = "primary",
   size = "large",
   children,
   onClick,
-}: Props) {
+}) {
   return (
     <button
       onClick={onClick}

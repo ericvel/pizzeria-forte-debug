@@ -1,28 +1,14 @@
 import React from "react";
-import { IOrder } from "../interfaces/order";
 import Button from "./Button";
 
-type OrderItemProps = {
-  order: IOrder;
-  onCheckDetails?: () => void;
-};
-
-type FieldProps = {
-  label: string;
-  value: string;
-};
-
-const Field = ({ label, value }: FieldProps) => (
+const Field = ({ label, value }) => (
   <div className="w-32">
     <p className="text-sm text-gray-500">{label}</p>
     <p>{value}</p>
   </div>
 );
 
-export default function OrderItem({
-  order,
-  onCheckDetails = () => {},
-}: OrderItemProps) {
+export default function OrderItem({ order, onCheckDetails = () => {} }) {
   return (
     <div className="flex items-center gap-16 py-4">
       <Field label="Ordernr." value={order.orderId.toString()} />

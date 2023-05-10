@@ -1,15 +1,6 @@
 import React from "react";
-import { IOrder } from "../interfaces/order";
 
-type OrderDetailsProps = {
-  order: IOrder;
-};
-
-type DetailsItemProps = {
-  name: string;
-};
-
-const DetailsItem = ({ name }: DetailsItemProps) => {
+const DetailsItem = ({ name }) => {
   return (
     <div className="flex items-center justify-between py-4">
       <p>{name}</p>
@@ -17,7 +8,7 @@ const DetailsItem = ({ name }: DetailsItemProps) => {
   );
 };
 
-export default function OrderDetails({ order }: OrderDetailsProps) {
+export default function OrderDetails({ order }) {
   return (
     <div
       className="flex max-w-[480px] grow flex-col rounded-md border border-gray-300 bg-white p-4"

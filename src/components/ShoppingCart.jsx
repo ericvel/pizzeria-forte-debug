@@ -1,19 +1,7 @@
 import React from "react";
-import { IPizza } from "../interfaces/pizza";
 import Button from "./Button";
 
-type ShoppingCartProps = {
-  items: IPizza[];
-  onCompleteOrder: () => void;
-  onRemoveFromOrder: (itemIndex: number) => void;
-};
-
-type ShoppingCartItemProps = {
-  pizza: IPizza;
-  onRemove: () => void;
-};
-
-const ShoppingCartItem = ({ pizza, onRemove }: ShoppingCartItemProps) => {
+const ShoppingCartItem = ({ pizza, onRemove }) => {
   return (
     <div className="flex items-center justify-between py-4">
       <div>
@@ -31,7 +19,7 @@ export default function ShoppingCart({
   items,
   onCompleteOrder,
   onRemoveFromOrder,
-}: ShoppingCartProps) {
+}) {
   const getTotalPrice = () => {
     const totalPrice = items.reduce(
       (accumulator, item) => accumulator + item.price,

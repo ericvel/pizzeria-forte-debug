@@ -4,24 +4,21 @@ import Heading from "../components/Heading";
 import PizzaCard from "../components/PizzaCard";
 import ShoppingCart from "../components/ShoppingCart";
 
-import { IPizza } from "../interfaces/pizza";
-// import { IPostOrder } from "../interfaces/order";
 import { fetchAllPizzas } from "../api/fetchAllPizzas";
-// import { postOrder } from "../api/postOrder";
 
 export default function NewOrder() {
-  const [pizzas, setPizzas] = useState<IPizza[]>([]);
-  const [shoppingCartItems, setShoppingCartItems] = useState<IPizza[]>([]);
+  const [pizzas, setPizzas] = useState([]);
+  const [shoppingCartItems, setShoppingCartItems] = useState([]);
 
   useEffect(() => {
     fetchAllPizzas().then((response) => setPizzas(response));
   }, []);
 
-  const handleAddToOrder = (pizza: IPizza) => {
+  const handleAddToOrder = (pizza) => {
     setShoppingCartItems((currentCartItems) => [...currentCartItems, pizza]);
   };
 
-  const handleRemoveFromOrder = (itemIndex: number) => {
+  const handleRemoveFromOrder = (itemIndex) => {
     const updatedCartItems = shoppingCartItems.filter(
       (_, index) => index !== itemIndex
     );
@@ -30,15 +27,6 @@ export default function NewOrder() {
   };
 
   const handleCompleteOrder = () => {
-    // const pizzaIds = shoppingCartItems.map((item) => {
-    //   return item.id;
-    // });
-    // const body: IPostOrder = {
-    //   userId: 1,
-    //   pizzaIds: pizzaIds,
-    // };
-    // postOrder(body);
-
     setShoppingCartItems([]);
 
     alert(

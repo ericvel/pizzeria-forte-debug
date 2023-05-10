@@ -1,5 +1,4 @@
 import { dummyOrders } from "../data/dummyOrders";
-import { IOrder } from "./../interfaces/order";
 
 /* export const fetchUserOrders = async (userId?: number): Promise<IOrder[]> => {
   return fetch(`https://kjetilpizzaapi.azurewebsites.net/api/orders/${userId}`)
@@ -13,7 +12,7 @@ import { IOrder } from "./../interfaces/order";
     });
 }; */
 
-export const fetchUserOrders = async (userId?: number): Promise<IOrder[]> => {
+export const fetchUserOrders = async (userId) => {
   return new Promise((resolve) => {
     resolve(dummyOrders);
   });
