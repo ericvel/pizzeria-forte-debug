@@ -11,8 +11,7 @@ export default function MyOrders() {
   const [selectedOrder, setSelectedOrder] = useState();
 
   useEffect(() => {
-    const userId = 1; // hardkodet bruker-ID
-    fetchUserOrders(userId).then((response) => setOrders(response));
+    fetchUserOrders().then((response) => setOrders(response));
   }, []);
 
   return (

@@ -12,7 +12,7 @@ import { dummyOrders } from "../data/dummyOrders";
     });
 }; */
 
-export const fetchUserOrders = async (userId) => {
+export const fetchUserOrders = async () => {
   return new Promise((resolve) => {
     resolve(dummyOrders);
   });

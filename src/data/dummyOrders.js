@@ -14,9 +14,9 @@ export const dummyOrders = [
     pizzas: ["Margherita"],
     price: 110,
   },
-  // {
-  //   orderId: 3,
-  //   pizzas: null,
-  //   price: null,
-  // },
+  {
+    orderId: 3,
+    pizzas: null,
+    price: null,
+  },
 ];
