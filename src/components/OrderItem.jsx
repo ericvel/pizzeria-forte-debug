@@ -9,11 +9,13 @@ const Field = ({ label, value }) => (
 );
 
 export default function OrderItem({ order, onCheckDetails = () => {} }) {
+  const { orderId, pizzas, price } = order;
+
   return (
     <div className="flex items-center gap-16 py-4">
-      <Field label="Ordernr." value={order.orderId.toString()} />
-      <Field label="Pris" value={`${order.price} kr`} />
-      <Field label="Antall pizzaer" value={`${order.pizza.length} stk.`} />
+      <Field label="Ordernr." value={orderId.toString()} />
+      <Field label="Pris" value={`${price} kr`} />
+      <Field label="Antall pizzaer" value={`${pizzas.length} stk.`} />
       <Button onClick={() => onCheckDetails()} variant="ghost" size="small">
         Se detaljer
       </Button>

@@ -1,4 +1,4 @@
-# Forte Developer Academy - Frontend
+# DEBUG DEMO: Forte Developer Academy - Frontend
 
 ## Introduksjon
 
